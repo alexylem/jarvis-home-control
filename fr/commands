@@ -1,0 +1,2 @@
+*ALLUME*==pg_jc_turn on "$order" && say "Voilà"
+*ETEIN*==pg_jc_turn off "$order" && say "Voilà"
