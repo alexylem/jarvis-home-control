@@ -14,6 +14,7 @@ If your home automation system can be controlled via http requests, this Jarvis 
 It will allow you to simply turn on and off your devices.
 
 In the plugin configuration:
+
 1. Indicate the turn on and turn off http urls (with `[ADDRESS]` placeholder)
 2. List your device names & corresponding addresses in `json` format
 
