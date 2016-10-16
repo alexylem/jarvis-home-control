@@ -13,21 +13,24 @@ For multi-language plugin:
 If your home automation system can be controlled via http requests, this Jarvis plugin is just for you.
 It will allow you to simply turn on and off your devices.
 
-In the plugin configuration:
+## Configuration
 
-1. Indicate the turn on and turn off http urls (with `[ADDRESS]` placeholder)
+1. Indicate the turn on and turn off http urls (with `[ADDRESS]` placeholder):
+   
+   ```
+   pg_hc_turnon_url="http://192.168.1.1/home.php?action=on&device=[ADDRESS]"
+   pg_hc_turnoff_url="http://192.168.1.1/home.php?action=off&device=[ADDRESS]"
+   ```
+   
 2. List your device names & corresponding addresses in `json` format
-
-Ex:
-```
-pg_hc_turnon_url="http://192.168.1.1/home.php?action=on&device=[ADDRESS]"
-pg_hc_turnoff_url="http://192.168.1.1/home.php?action=off&device=[ADDRESS]"
-pg_hc_config='{ "devices":[
-    { "name": "BEDROOM", "address": "A1"},
-    { "name": "LIVING ROOM", "address": "A2"},
-    { "name": "BAR", "address": "A3"}
-]}'
-```
+   
+   ```
+   pg_hc_config='{ "devices":[
+       { "name": "BEDROOM", "address": "A1"},
+       { "name": "LIVING ROOM", "address": "A2"},
+       { "name": "BAR", "address": "A3"}
+   ]}'
+   ```
 
 ## Usage
 ```
