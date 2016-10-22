@@ -35,7 +35,7 @@ It will allow you to simply turn on and off your devices.
 ## Usage
 ```
 You: turn on the bar
-> http://192.168.1.1/home.php?action=on&device=A3
+# > http://192.168.1.1/home.php?action=on&device=A3
 Jarvis: Done
 ```
 
