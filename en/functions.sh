@@ -6,13 +6,14 @@ pg_jc_turn () {
     # $1: action [on|off]
     # $2: received order
     [ "$1" == "off" ] && local url="$pg_hc_turnoff_url" || local url="$pg_hc_turnon_url"
-    local -r order="$2"
+    local -r order="$(jv_sanitize "$2" ".*")"
     while read device; do
         if [[ "$order" =~ .*$device.* ]]; then
             local address="$(echo $pg_hc_config | jq -r ".devices[] | select(.name==\"$device\") | .address")"
-            curl -s -o /dev/null "${url//\[ADDRESS\]/$address}"
-            return 0
+            jv_curl "${url//\[ADDRESS\]/$address}"
+            return $?
         fi
     done <<< "$(echo $pg_hc_config | jq -r '.devices[].name')"
+    jv_error "ERROR: no device maching $2"
     return 1
 }
