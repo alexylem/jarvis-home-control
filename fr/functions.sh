@@ -6,9 +6,10 @@ pg_jc_turn () {
     # $1: action [on|off]
     # $2: received order
     [ "$1" == "off" ] && local url="$pg_hc_turnoff_url" || local url="$pg_hc_turnon_url"
-    local -r order="$(jv_sanitize "$2" ".*")"
+    local -r order="$(jv_sanitize "$2")"
     while read device; do
-        if [[ "$order" =~ .*$device.* ]]; then
+        local sdevice="$(jv_sanitize "$device" ".*")"
+        if [[ "$order" =~ .*$sdevice.* ]]; then
             local address="$(echo $pg_hc_config | jq -r ".devices[] | select(.name==\"$device\") | .address")"
             jv_curl "${url//\[ADDRESS\]/$address}"
             return $?
