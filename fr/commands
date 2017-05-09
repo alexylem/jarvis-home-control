@@ -1,2 +1,2 @@
-*ALLUME*==pg_jc_turn on "$order" && say "Voilà"
-*ETEIN*==pg_jc_turn off "$order" && say "Voilà"
+*OUVRE*|*ALLUME*|*MONTE*|*MARCHE*==turn on "$order"
+*FERME*|*ETEIN*|*DESCEND*|*ARRET*|*STOP*|*ARRETE*L*==turn off "$order"
