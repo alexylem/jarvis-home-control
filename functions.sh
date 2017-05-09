@@ -15,5 +15,5 @@ pg_hc_turn () {
         fi
     done <<< "$(echo $pg_hc_config | jq -r '.devices[].name')"
     say "$(pg_hc_lg "no_device_matching" "$2")"
-    return 1
+    return 0 # error already said above, no need to trigger error phrase
 }
