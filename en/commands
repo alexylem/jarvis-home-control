@@ -1,2 +1,2 @@
-*TURN ON *==pg_jc_turn on "$order" && say "Done"
-*TURN OFF *==pg_jc_turn off "$order" && say "Done"
+*SWITCH ON (*)==pg_hc_turn on "$order"
+*SWITCH OFF (*)==pg_hc_turn off "$order"

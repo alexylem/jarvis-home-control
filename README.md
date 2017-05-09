@@ -33,10 +33,19 @@ It will allow you to simply turn on and off your devices.
    ```
 
 ## Usage
+
+**Français**
 ```
-You: turn on the bar
+Vous: allume le bar
 # > http://192.168.1.1/home.php?action=on&device=A3
-Jarvis: Done
+Jarvis: j'allume le bar
+```
+
+**English**
+```
+You: switch on the bar
+# > http://192.168.1.1/home.php?action=on&device=A3
+Jarvis: turning on the bar
 ```
 
 ## Author
