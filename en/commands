@@ -1,2 +1,2 @@
-*SWITCH ON (*)==pg_hc_turn on "$order"
-*SWITCH OFF (*)==pg_hc_turn off "$order"
+*SWITCH ON (*)==pg_hc_turn on "(1)"
+*SWITCH OFF (*)==pg_hc_turn off "(1)"
