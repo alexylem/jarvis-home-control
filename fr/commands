@@ -1,2 +1,2 @@
-*ALLUME[^ ]+ (*)==pg_hc_turn on "(1)"
-*ETEIN[^ ]+ (*)==pg_hc_turn off "$order"
+*ALLUM[^ ]+ (*)==pg_hc_turn on "(1)"
+*ETEIN[^ ]+ (*)==pg_hc_turn off "(1)"
